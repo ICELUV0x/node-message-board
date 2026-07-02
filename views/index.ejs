@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage | Converpass</title>
+</head>
+    <body >
+        <header>
+            <h1 style="font-family: 'Courier New', Courier, monospace; font-size: 32px;  color: rgb(20, 62, 179);">Converpass</h1>
+            <button>
+                <a href="/new" style="text-decoration: none;  color: black;">Click to send new message</a>
+            </button>
+        </header>
+        <ul>
+            <% messages.forEach((message, index)=> { %>
+                <li>
+                    <p>Message: <%= message.text %></p>
+                    <p>Sender: <%= message.user %></p>
+                    <p>Time: <%= message.added %></p>
+                    <p>MessageID: <%= index %></p>
+                    <a href="/messages/<%= index %>" style="text-decoration: none; font-weight: bold;">Details</a>
+                </li>
+            <% }); %>
+        </ul>
+    </body>
+</html>

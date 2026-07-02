@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Form</title>
+</head>
+<body>
+    <div>
+        <h1>Message Input Form</h1>
+
+        <form method="POST" action="/new" style="display:flex;flex-direction:column; max-width: 300px; gap: 10px;">
+
+            <label for="author">Write your name</label>
+            <input
+            type="text"
+            id="author"
+            name="user"
+            />
+            
+            <label for="message-text">Enter your message</label>
+            <textarea id="message-text" 
+            name="text" 
+            style="resize: none; width: auto; height: 150px; padding: 0;"></textarea>
+            
+            <input
+            type="submit" 
+            />
+        </form>
+    </div>
+</body>
+</html>
