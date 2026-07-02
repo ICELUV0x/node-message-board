@@ -12,7 +12,7 @@ const messageRouter = require('./routes/new-message');
 //
 
 
-app.listen(4044, () => console.log('Server started on port 4044'))
+app.listen((process.env.PORT || 4044), () => console.log('Server started on port 4044'))
 
 app.use('/', mainRouter);
 
